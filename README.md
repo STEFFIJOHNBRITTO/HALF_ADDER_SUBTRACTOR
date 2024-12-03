@@ -34,7 +34,9 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
-![TRUTHTABLE](https://github.com/user-attachments/assets/67b3ea41-11b8-43ed-8445-e6c7a5f5d3c2)
+
+![image](https://github.com/user-attachments/assets/f22534d0-553c-42bb-aee2-1f8d7588d152)
+
 
 **Procedure**
 
@@ -57,19 +59,47 @@ Developed by: STEFFI J
 
 RegisterNumber: 24900405
 ```
+HALF ADDER
+
 module ha(a,b,sum,carry);
  input a,b;
  output sum,carry;
  assign sum= (a ^ b);
  assign carry= ( a & b);
  endmodule
+
+HALF SUBTRACTER
+
+module halfsub(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference=(a^b);
+assign borrow= (~a & b);
+endmodule
+
 ```
 
 **RTL Schematic**
-![ph1](https://github.com/user-attachments/assets/26f479b3-9f95-4851-b9d2-932c8e2bc17a)
+
+HALF ADDER
+
+![image](https://github.com/user-attachments/assets/a3b560c1-2c5b-42b6-8aba-67e7295b88cf)
+
+HALF SUBTRACTER
+
+![image](https://github.com/user-attachments/assets/04f705c3-e800-401a-a722-c2eb54fea30a)
+
 
 **Output/TIMING Waveform**
-![tt1](https://github.com/user-attachments/assets/5b4886e4-63d3-4133-afcd-35ef697603ef)
+
+HALF ADDER
+
+![image](https://github.com/user-attachments/assets/330e140a-ecc2-490f-aa52-351bc9015dd3)
+
+HALF SUBTRACTER
+
+![image](https://github.com/user-attachments/assets/b13af479-5e4c-4066-a8ea-7ce55a93bba1)
+
 
 **Result:**
 Designed a half adder and half subtractor circuit and verified its truth table in Quartus using Verilog
